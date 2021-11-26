@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lab1_class,lab1.class,model_lab1_class,base.group_user,1,1,1,1
+access_lab1_score,lab1.score,model_lab1_score,base.group_user,1,1,1,1
+access_lab1_student,lab1.student,model_lab1_student,base.group_user,1,1,1,1
+access_lab1_teacher,lab1.teacher,model_lab1_teacher,base.group_user,1,1,1,1

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_lab1_class_tree" model="ir.ui.view">
+            <field name="name">view.lab1.class.tree</field>
+            <field name="model">lab1.class</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="class_name"/>
+                    <field name="class_teacher"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_lab1_class_form" model="ir.ui.view">
+            <field name="name">view.lab1.class.form</field>
+            <field name="model">lab1.class</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="class_name"/>
+                            <field name="class_teacher"/>
+                        </group>
+                        <!--顯示One2many字段所對應的欄位-->
+                        <field name="class_line" nolab1el="1">
+                            <tree editable="top" string="Student Info" widget="one2many">
+                                <field name="student_no"/>
+                                <field name="student_name"/>
+                                <field name="student_contact"/>
+                                <field name="student_class"/>
+                                <field name="student_fm"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_lab1_class_view" model="ir.actions.act_window">
+            <field name="name">學員班級資訊</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">lab1.class</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"></p>
+                <p></p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_lab1_student_tree" model="ir.ui.view">
+            <field name="name">view.lab1.student.tree</field>
+            <field name="model">lab1.student</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="student_no"/>
+                    <field name="student_name"/>
+                    <field name="student_contact"/>
+                    <field name="student_class"/>
+                    <field name="student_birthday"/>
+                    <field name="student_fm"/>
+                    <field name="student_memo"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_lab1_student_form" model="ir.ui.view">
+            <field name="name">view.lab1.student.form</field>
+            <field name="model">lab1.student</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="student_no"/>
+                            <field name="student_name"/>
+                            <field name="student_contact"/>
+                            <field name="student_class"/>
+                            <field name="student_birthday"/>
+                            <field name="student_fm"/>
+                            <field name="student_memo"/>
+                            <field name="student_obj"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_lab1_student_view" model="ir.actions.act_window">
+            <field name="name">學生基本資料</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">lab1.student</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"></p>
+                <p></p>
+            </field>
+        </record>
+    </data>
+</odoo>
